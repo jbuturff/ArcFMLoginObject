@@ -94,41 +94,57 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ESRI.ArcGIS.ADF, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86" />
+    <Reference Include="ESRI.ArcGIS.ADF, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="ESRI.ArcGIS.ArcMapUI, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="ESRI.ArcGIS.Catalog">
       <Name>ESRI.ArcGIS.Catalog</Name>
       <HintPath>D:\Program Files\ArcGIS\DotNet\ESRI.ArcGIS.Catalog.dll</HintPath>
       <AssemblyFolderKey>hklm\dn\arcgis desktop</AssemblyFolderKey>
+      <Private>False</Private>
     </Reference>
     <Reference Include="ESRI.ArcGIS.CatalogUI">
       <Name>ESRI.ArcGIS.CatalogUI</Name>
       <HintPath>D:\Program Files\ArcGIS\DotNet\ESRI.ArcGIS.CatalogUI.dll</HintPath>
       <AssemblyFolderKey>hklm\dn\arcgis desktop</AssemblyFolderKey>
+      <Private>False</Private>
     </Reference>
     <Reference Include="ESRI.ArcGIS.DataSourcesGDB, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="ESRI.ArcGIS.Framework, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="ESRI.ArcGIS.Geodatabase">
       <Name>ESRI.ArcGIS.Geodatabase</Name>
       <HintPath>D:\Program Files\ArcGIS\DotNet\ESRI.ArcGIS.Geodatabase.dll</HintPath>
       <AssemblyFolderKey>hklm\dn\arcgis desktop</AssemblyFolderKey>
+      <Private>False</Private>
     </Reference>
     <Reference Include="ESRI.ArcGIS.GeoDatabaseDistributed, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="ESRI.ArcGIS.System">
       <Name>ESRI.ArcGIS.System</Name>
       <HintPath>D:\Program Files\ArcGIS\DotNet\ESRI.ArcGIS.System.dll</HintPath>
       <AssemblyFolderKey>hklm\dn\arcgis desktop</AssemblyFolderKey>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Miner.Framework.Engine, Version=10.0.0.0, Culture=neutral, PublicKeyToken=196beceb052ed5dc, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Miner.Interop.Desktop">
       <Name>Miner.Interop.Desktop</Name>
@@ -138,6 +154,7 @@
     </Reference>
     <Reference Include="Miner.Interop.Framework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=196beceb052ed5dc, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Miner.Interop.Geodatabase, Version=9.2.0.0, Culture=neutral, PublicKeyToken=196beceb052ed5dc, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
@@ -199,7 +216,8 @@
   <PropertyGroup>
     <PreBuildEvent>
     </PreBuildEvent>
-    <PostBuildEvent>RegX.exe "$(TargetPath)" /r /c /s
-    </PostBuildEvent>
+    <PostBuildEvent>copy /y "$(TargetPath)" c:\PerfQAnalyzer\bin\$(TargetFileName)
+RegX.exe "c:\PerfQAnalyzer\bin\$(TargetFileName)" /r /c /s
+</PostBuildEvent>
   </PropertyGroup>
 </Project>

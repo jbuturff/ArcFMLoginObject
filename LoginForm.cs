@@ -522,6 +522,9 @@ namespace ArcFMLoginObject
                         case "INSTANCE":
                             _propSet.SetProperty("INSTANCE", sValues[1]);
                             break;
+                        case "DATABASE":
+                            _propSet.SetProperty("DATABASE", sValues[1]);
+                            break;
                         case "IS_GEODATABASE":
                             _propSet.SetProperty("IS_GEODATABASE", sValues[1]);
                             break;

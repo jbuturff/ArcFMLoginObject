@@ -6,12 +6,12 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 //
-[assembly: AssemblyTitle("ESRI")]
+[assembly: AssemblyTitle("ArcFMLoginObject")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Esri")]
-[assembly: AssemblyProduct("")]
-[assembly: AssemblyCopyright("Copyright 2003 Miner & Miner")]
+[assembly: AssemblyCompany("Geographic Database Consulting")]
+[assembly: AssemblyProduct("ArcFMLoginObject")]
+[assembly: AssemblyCopyright("Published under Free Public License 1.0.0")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: ComVisible(true)]
@@ -27,7 +27,7 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Revision and Build Numbers 
 // by using the '*' as shown below:
 
-[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyVersion("10.2.1.102")]
 
 //
 // In order to sign your assembly you must specify a key to use. Refer to the 
